@@ -1,0 +1,328 @@
+/* default */
+body, html {
+     margin: 0;
+     font-family: Arial, Helvetica, sans-serif;
+     background-image: url("image/lottologo.gif");
+     background-repeat: no-repeat;
+     background-position: right top;
+     margin-right: 200px;
+     font-size: 20px;
+   }
+
+
+/* Style the top navigation bar */
+.topnav {
+     overflow: hidden;
+     background-color: #333;
+   }
+   
+   /* Style the topnav links */
+   .topnav a {
+     float: left;
+     display: block;
+     color: #f2f2f2;
+     text-align: center;
+     padding: 14px 16px;
+     text-decoration: none;
+   }
+   
+   /* Change color on hover */
+   .topnav a:hover {
+     background-color: #ddd;
+     color: black;
+   }
+   
+   /* Style the content */
+   .content {
+     background-color: #ddd;
+     padding: 10px;
+     height: 200px; /* Should be removed. Only for demonstration */
+   }
+   
+   /* Style the footer */
+   .footer {
+     background-color: #f1f1f1;
+     padding: 10px;
+   }
+
+   
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+table,
+th,
+td div,
+form,
+fieldset,
+legend,
+input,
+textarea,
+button,
+select,
+pre,
+code {
+     margin: 5px;
+     padding: 0;
+     background-color: dodgerblue;
+     -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+     -o-box-sizing: border-box;
+     -ms-box-sizing: border-box;
+     box-sizing: border-box
+}
+
+input,
+textarea,
+select,
+button,
+table,
+pre {
+     font-family: 'Noto Sans KR', '맑은고딕', 'Malgun Gothic', '돋움', Dotum, sans-serif;
+     font-size: 14px;
+     color: #333;
+     font-weight: 300;
+     letter-spacing: -0.05em;
+     vertical-align: middle
+}
+
+a,
+p,
+span,
+strong,
+em,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+div {
+     line-height: 1em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+     color: #1d1d1d
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+     display: block;
+     margin: 0;
+     padding: 0;
+     -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+     -o-box-sizing: border-box;
+     -ms-box-sizing: border-box;
+     box-sizing: border-box;
+}
+
+img,
+fieldset {
+     border: 0;
+     vertical-align: middle
+}
+
+iframe,
+button {
+     border: 0
+}
+
+ul,
+ol {
+     list-style: none
+}
+
+hr,
+caption,
+legend {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 0;
+     height: 0;
+     overflow: hidden;
+     /* visibility:hidden; */
+     font-size: 0;
+     line-height: 0
+}
+
+table {
+     /* border-collapse:collapse; */
+     border-spacing: 0;
+     width: 100%
+}
+
+a {
+     text-decoration: none;
+     font-family: 'Noto Sans KR', '맑은 고딕', 'Malgun Gothic', '돋움', Dotum, sans-serif;
+     color: #333
+}
+
+p,
+li,
+dd {
+     font-weight: 300;
+     color: #767676;
+     line-height: 22px
+}
+
+input[type="number"],
+input[type="text"],
+input[type="password"] {
+     display: inline-block;
+     height: 34px;
+     line-height: 31px;
+     padding: 0 9px;
+     border: 1px solid #ddd;
+     box-sizing: border-box
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+     display: inline-block;
+     width: 20px;
+     height: 20px
+}
+
+input[type="radio"]+label,
+input[type="checkbox"]+label {
+     display: inline-block;
+     vertical-align: middle;
+     height: 20px;
+     line-height: 19px;
+     padding-left: 8px;
+     margin-right: 16px
+}
+
+input[type="text"]+.ui-datepicker-trigger {
+     vertical-align: middle;
+     margin-left: -1px
+}
+
+input.hasDatepicker {
+     width: 90px
+}
+
+textarea {
+     display: block;
+     width: 100%;
+     padding: 8px 9px;
+     line-height: 1.333em;
+     border: 1px solid #ddd;
+     background: #fff
+}
+
+input[type="text"].money {
+     background-color: #fff7d8
+}
+
+input[type="text"].transparent {
+     background-color: transparent;
+     border-color: transparent
+}
+
+input[type="text"].fill {
+     background: #f5f5f5
+}
+
+input:not([type=checkbox]):not([type=radio]):disabled,
+select:disabled {
+     color: #888;
+     background: #f9f9f9;
+     opacity: 1;
+     -webkit-text-fill-color: none
+}
+
+.hidden {
+     display: none
+}
+
+.blind {
+     visibility: hidden;
+     position: absolute;
+     top: -9999px;
+     width: 0;
+     height: 0;
+     font-size: 0;
+     line-height: 0
+}
+
+/* Layout */
+hr {
+     display: none;
+     clear: both
+}
+
+th,
+td {
+     border-collapse: collapse;
+}
+
+.radio,
+.checkbox {
+     width: 13px;
+     height: 13px;
+     margin: 2px 5px 2px 0;
+     padding: 0;
+     border: 0;
+     vertical-align: middle
+}
+
+.text {
+     height: 13px;
+     padding: 2px 0 6px 7px;
+     border: 1px solid #ccc;
+     font-size: 11px;
+     color: #6c655c
+}
+
+.clearfx {
+     zoom: 1;
+}
+
+.clearfx:after {
+     content: "";
+     display: block;
+     clear: both;
+}
+
+.hide {
+     position: absolute;
+     z-index: -10;
+     width: 0;
+     height: 0;
+     line-height: 0;
+     font-size: 0;
+     text-indent: -9999px;
+}
