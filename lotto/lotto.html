@@ -9,11 +9,11 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body> <!-- onload="showWinNumbers()"> -->
 
     <div class="topnav">
-        <a href="#">Link</a>
-        <a href="#">Link</a>
+        <a href="#">Home</a>
+        <a href="https://dhlottery.co.kr/">Lotto645</a>
         <a href="#">Link</a>
     </div>
 
@@ -22,44 +22,46 @@
     <div class="content">
         <h3 class="sub_title">지난 당첨결과</h3>
         <div class="win_result">
-            <p>
-                <span class="draw-no">1011회 당첨결과</span>
-                <span class="draw-dd">(2022년 04월 16일 추첨)</span>
+            <p id="num-draw"> <!--
+                <span>1011회 당첨결과 (2022년 04월 16일 추첨)</span> -->
             </p>
             <div class="nums">
                 <div class="num-win">
-                    <strong>당첨번호</strong>
-                    <p>
+                    <strong>&nbsp;&nbsp;&nbsp;당첨번호</strong>
+                    <p id="num-win"> <!--
                         <span class="ball_645 ball1">1</span>
                         <span class="ball_645 ball1">9</span>
                         <span class="ball_645 ball2">12</span>
                         <span class="ball_645 ball3">26</span>
                         <span class="ball_645 ball4">35</span>
                         <span class="ball_645 ball4">38</span>
+                    -->
                     </p>
                 </div>
                 <div class="ball_plus">+</div>
                 <div class="num-bonus">
-                    <strong>보너스</strong>
-                    <p><span class="ball_645 ball5">42</span></p>
+                    <strong>&nbsp;보너스</strong>
+                    <p id="num-bonus">  <!--
+                        <span class="ball_645 ball5">42</span> -->
+                    </p>
                 </div>
             </div>
         </div>
+        <button class="btn_no" onclick="ShowPreviousNumbers()">&lt;&lt; 이전 회차</button>
+        <button class="btn_no" onclick="ShowNextNumbers()">다음 회차 &gt;&gt;</button>
     </div>
-
+    
     <div class="content">
         <h3 class="sub_title">로또 번호 학습하기 및 예측하기</h3>
-        <p id="rcorners">PEnding</p>
-        <button class="button">Button</button>
-
+        <div id="rcorners">Pending</div>
+        <button class="button" onclick="updateLottoNumbers()">Button</button>
     </div>
-
-
 
     <div class="footer">
         e99ward - python and machine learning, April 2022.
     </div>
 
+    <script src="main.js"></script>
 </body>
 
 </html>

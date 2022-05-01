@@ -80,8 +80,19 @@ p {
 .button:hover {
     background-color: #2d9a31;
     color: white;
-  }
+}
 
+.btn_no {
+    border: none;
+    border-radius: 8px;
+    padding: 5px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 30px 5px;
+    cursor: pointer;
+}   
 
 #rcorners {
     border-radius: 25px;
