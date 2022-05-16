@@ -1,3 +1,5 @@
+# Code from https://cosmosproject.tistory.com/
+#
 import requests
 
 def get_lotto_number_by_draw(round_number):

@@ -78,3 +78,41 @@ function ShowNextNumbers() {
         ShowLottoNumber(numbers[current]);
     }    
 }
+
+// Promise Style
+function updateLottoNumbers() {
+    let text3 = '<img src="image/rolling.gif" style="height:300px"> Anticipating...';
+    getPromise(3000).then(
+        function(value) {
+            text3 = value;
+            document.getElementById("rcorners").innerHTML = text3;
+        },
+        function(error) { /* code if some error */ }
+    );
+    document.getElementById("rcorners").innerHTML = text3;
+}
+
+function getPromise(ms) {
+    let myPromise = new Promise(function(myResolve, myReject) {
+        setTimeout(() => {
+            myResolve("OK"); // when successful
+            myReject("Error");  // when error
+        }, ms);
+    });
+    return myPromise;
+}
+
+// Asynchronous Style
+function UpdateLottoNumbers() {
+    //let text3 = '<img src="image/rolling.gif" style="height:300px"> Anticipating...';
+    let text3 = '<p id="loader"></p> Anticipating...';
+    setTimeout(DisplayComplete, 3000)
+    document.getElementById("rcorners").innerHTML = text3;
+    document.getElementById("btn").innerHTML = '';
+    //document.getElementsByClassName("button").remove(); // .style.display="none"
+}
+
+function DisplayComplete() {
+    let text4 = 'Completed!!';
+    document.getElementById("rcorners").innerHTML = text4;
+}
