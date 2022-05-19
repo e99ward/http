@@ -114,5 +114,9 @@ function UpdateLottoNumbers() {
 
 function DisplayComplete() {
     let text4 = 'Completed!!';
+    let num1 = Math.floor(Math.random() * 45) + 1;
+    text4 += '<span class="ball_645 ball1">';
+    text4 += num1;
+    text4 += '</span>\n';
     document.getElementById("rcorners").innerHTML = text4;
 }
