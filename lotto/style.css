@@ -4,7 +4,7 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-image: url("image/lottologo.gif");
+    background-image: url("./image/lottologo.gif");
     background-repeat: no-repeat;
     background-position: right 50px top 50px;
 }

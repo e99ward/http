@@ -1,0 +1,98 @@
+body {
+    /* max-width: 750px; */
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+section {
+    border: lightblue solid;
+    padding-bottom: 50px;
+    
+}
+
+/* iphone Hello */
+
+#hello {
+    background-color: transparent;
+    padding-bottom: 50px;
+}
+
+h2 {
+    padding-top: 60px;
+    padding-left: 20px;
+}
+
+p {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+div.intro{
+    position: relative;
+    top: 50px;
+    overflow: hidden;
+    width: 100%;
+    height: 200px;
+    border: pink solid;
+    text-align: center;
+}
+
+.intro #en {
+    margin: 0;
+    position: absolute;
+    top: 20%;
+    left: 45%;
+    opacity: 0;
+    animation: fadein 5s ease-in-out;
+}
+
+.intro #cn {
+    margin: 0;
+    position: absolute;
+    top: 30%;
+    left: 65%;
+    opacity: 0;
+    animation: fadein 5s ease-in-out 2s;
+}
+
+.intro #jp {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    opacity: 0;
+    animation: fadein 5s ease-in-out 3s;
+}
+
+.intro #kr {
+    margin: 0;
+    position: absolute;
+    top: 60%;
+    left: 45%;
+    opacity: 0;
+    animation: fadein 5s ease-in-out 5s forwards;
+}
+
+
+.introtext {
+    position: absolute;
+    top: 20%;
+    left: 20px;
+    font-size: 2em;
+    color: white;
+}
+
+.introcomm {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2em;
+    color: white;
+}
+
+@keyframes fadein {
+    0% { opacity: 0; }
+    100% { opacity: 1; transform: scale(1.2); }
+}
+
+

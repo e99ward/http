@@ -81,7 +81,7 @@ function ShowNextNumbers() {
 
 // Promise Style
 function updateLottoNumbers() {
-    let text3 = '<img src="image/rolling.gif" style="height:300px"> Anticipating...';
+    let text3 = '<img src="./image/rolling.gif" style="height:300px"> Anticipating...';
     getPromise(3000).then(
         function(value) {
             text3 = value;
