@@ -161,8 +161,8 @@ p {
 .base {
     position: absolute;
     top: 20px;
-    left: -20px;
-    width: 70px;
+    left: -50px;
+    width: 130px;
     height: 10px;
     background-color: #444;
     border-radius: 2px;
@@ -176,28 +176,86 @@ p {
     display: grid;
 }
 
-.typing-l1 {
-    width: 31ch;
-    /*animation: typing 2s steps(31), step-end infinite;*/
-    white-space: nowrap;
-    overflow: hidden;
-    font-family: monospace;
-    font-size: 2em;
+.intro #en {
+    margin: 0;
+    position: absolute;
+    top: 18%;
+    left: 42%;
+    opacity: 0;
+    animation: fadein 5s ease-in-out;
 }
 
-.typing-l2 {
-    width: 19ch;
-    /*animation: typing 2s steps(18), blink 0.5s step-end infinite alternate;*/
+.intro #cn {
+    margin: 0;
+    position: absolute;
+    top: 73%;
+    left: 60%;
+    opacity: 0;
+    animation: fadein 5s ease-in-out 2s;
+}
+
+.intro #jp {
+    margin: 0;
+    position: absolute;
+    top: 45%;
+    left: 15%;
+    opacity: 0;
+    animation: fadein 5s ease-in-out 3s;
+}
+
+.intro #kr {
+    margin: 0;
+    position: absolute;
+    top: 70%;
+    left: 38%;
+    opacity: 0;
+    animation: fadein 5s ease-in-out 5s;
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+}
+
+.typing-l1 {
+    width: 31ch;
+    opacity: 0;
+    animation: typing 3s 10s steps(31) forwards, blink 0.5s;
     white-space: nowrap;
     overflow: hidden;
     border-right: 3px solid;
     font-family: monospace;
-    font-size: 2em;
+    font-size: 1.5em;
+}
+
+.typing-l2 {
+    width: 19ch;
+    opacity: 0;
+    animation: typing 2s 13s steps(19) forwards, blink 0.5s infinite;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-family: monospace;
+    font-size: 1.5em;
 }
 
 @keyframes typing {
-    from {
+    0% {
         width: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
     }
 }
 
@@ -207,3 +265,59 @@ p {
     }
 }
 
+@keyframes slidy {
+    0% {
+        left: 0%;
+    }
+
+    20% {
+        left: 0%;
+    }
+
+    25% {
+        left: -100%;
+    }
+
+    45% {
+        left: -100%;
+    }
+
+    50% {
+        left: -200%;
+    }
+
+    70% {
+        left: -200%;
+    }
+
+    75% {
+        left: -300%;
+    }
+
+    95% {
+        left: -300%;
+    }
+
+    100% {
+        left: -400%;
+    }
+}
+
+.slider {
+    overflow: hidden;
+}
+
+.slider figure img {
+    width: 25%;
+    float: left;
+}
+
+.slider figure {
+    position: relative;
+    width: 400%;
+    margin: 0;
+    left: 0;
+    text-align: left;
+    font-size: 0;
+    animation: 30s slidy infinite;
+}

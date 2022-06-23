@@ -42,17 +42,17 @@ window.addEventListener("scroll", () => {
     let value = scrollY;
     console.log(value);
 
-    if (value > 500) {
+    if (value > 1400) {
         airplane.style.animation = "plane 5s forwards";
     } else {
         airplane.style.animation = "plane-revert 3s";
     }
 });
 
-/* for Section 2 */
-let coding1 = document.querySelector("p.typing-l1");
-let coding2 = document.querySelector("p.typing-l2");
+/* for Section 2
+let code1 = document.querySelector("p.typing-l1");
+let code2 = document.querySelector("p.typing-l2");
 
-coding1.style.animation = "typing 2s steps(31), step-end alternate";
-coding2.style.animation = "typing 2s 0.5s steps(18), blink 0.5s step-end infinite alternate";
-
+code1.style.animation = "typing 2s steps(31), step-end alternate";
+code2.style.animation = "typing 2s 0.5s steps(18), blink 0.5s step-end infinite alternate";
+*/
