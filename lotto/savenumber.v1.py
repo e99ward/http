@@ -5,25 +5,21 @@ import requests
 numbers = []
 numbers_to_add = []
 
-
-def LoadNumbersJSON():
-    filename = 'numbers.2.txt'
+def LoadNumbersTXT():
+    filename = 'numbers.v1.txt'
     with open(filename, 'r') as handle:
-        file_data = json.load(handle)
-        for list_to_add in file_data:
+        while True:
+            line = handle.readline()
+            if not line: break
+            list_to_add = json.loads(line)
             numbers.append(list_to_add)
-        print('nums', numbers)
 
-def SaveNumbersJSON():
-    filename = 'numbers.2.txt'
-    with open(filename, 'w') as handle:
-        handle.write('[')
-        mline = len(numbers)-1
+def SaveNumbersTXT():
+    filename = 'numbers.v1.txt'
+    with open(filename, 'a') as handle:
+        mline = len(numbers_to_add)
         for i in range(mline):
-            num_to_json = json.dumps(numbers[i])
-            handle.write(num_to_json + ',\n')
-        num_to_json = json.dumps(numbers[mline])
-        handle.write(num_to_json + ']')      
+            handle.writelines('\n' + numbers_to_add[i])
 
 def _get_lotto_number_by_draw(round_number):
     url = 'https://www.dhlottery.co.kr/common.do?method=getLottoNumber&drwNo={}'
@@ -42,7 +38,8 @@ def _get_lotto_number_by_draw(round_number):
     to_save = { 'draw': round_number, 'date': draw_date, 'n': [no_1,no_2,no_3,no_4,no_5,no_6], 'bonus': no_bonus }
     return to_save
 
-LoadNumbersJSON()
+
+LoadNumbersTXT()
 
 today = datetime.datetime.today()
 date_saved = datetime.datetime.strptime(numbers[-1]['date'], "%Y-%m-%d")
@@ -54,13 +51,12 @@ while (today > date_to_be_saved):
     #new_date = datetime.datetime.strftime(date_to_be_saved, "%Y-%m-%d")
     #new_set = { 'draw': new_draw_num, 'date': new_date, 'n': [55, 11, 18, 20, 35, 45], 'bonus': 33 }
     numbers.append(new_set)
-    save_new_number = True
-    #addjson = json.dumps(new_set)
-    #numbers_to_add.append(addjson)
+    addjson = json.dumps(new_set)
+    numbers_to_add.append(addjson)
     date_to_be_saved = date_to_be_saved + datetime.timedelta(days=7)
 
 print(numbers)
 print(numbers_to_add)
 
-if save_new_number:
-    SaveNumbersJSON()
+if numbers_to_add: # len(numbers_to_add) > 0
+    SaveNumbersTXT()

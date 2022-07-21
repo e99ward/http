@@ -42,7 +42,7 @@ window.addEventListener("scroll", () => {
     let value = scrollY;
     console.log(value);
 
-    if (value > 1400) {
+    if (value > 1500) {
         airplane.style.animation = "plane 5s forwards";
     } else {
         airplane.style.animation = "plane-revert 3s";
