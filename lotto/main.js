@@ -131,7 +131,7 @@ async function runML2() {
 async function DisplayRunning() {
     let text3 = '<p id="loader"></p> Anticipating...';
     document.getElementById("results").innerHTML = text3;
-    document.getElementById("btnML").innerHTML = '다시실행';
+    document.getElementById("btnML").innerHTML = '예측중...';
     setTimeout(runML, 2000);
 }
 
@@ -162,6 +162,7 @@ function UpdateLottoNumbers() {
         text4 += '</span>\n';
     });
     document.getElementById("results").innerHTML = text4;
+    document.getElementById("btnML").innerHTML = '다시실행';
 }
 
 async function ConvertToTensor(data) {
