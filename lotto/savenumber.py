@@ -5,9 +5,8 @@ import requests
 numbers = []
 numbers_to_add = []
 
-
 def LoadNumbersJSON():
-    filename = 'numbers.2.txt'
+    filename = 'numbers.txt'
     with open(filename, 'r') as handle:
         file_data = json.load(handle)
         for list_to_add in file_data:
@@ -15,7 +14,7 @@ def LoadNumbersJSON():
         print('nums', numbers)
 
 def SaveNumbersJSON():
-    filename = 'numbers.2.txt'
+    filename = 'numbers.txt'
     with open(filename, 'w') as handle:
         handle.write('[')
         mline = len(numbers)-1
@@ -51,12 +50,8 @@ date_to_be_saved = date_saved + datetime.timedelta(days=7)
 while (today > date_to_be_saved):
     new_draw_num = numbers[-1]['draw'] + 1
     new_set = _get_lotto_number_by_draw(new_draw_num)
-    #new_date = datetime.datetime.strftime(date_to_be_saved, "%Y-%m-%d")
-    #new_set = { 'draw': new_draw_num, 'date': new_date, 'n': [55, 11, 18, 20, 35, 45], 'bonus': 33 }
     numbers.append(new_set)
     save_new_number = True
-    #addjson = json.dumps(new_set)
-    #numbers_to_add.append(addjson)
     date_to_be_saved = date_to_be_saved + datetime.timedelta(days=7)
 
 print(numbers)

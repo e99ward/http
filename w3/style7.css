@@ -1,5 +1,7 @@
 body {
     /* max-width: 750px; */
+    background: linear-gradient(135deg,#00A6B7,#73FAC9);
+    background-size: 100% 400%;
     margin: 0;
     font-family: Arial, sans-serif;
 }
