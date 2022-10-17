@@ -17,7 +17,7 @@ async function runFirst() {
 
 async function LoadData() {
     // load lotto
-    const URL = './numbers.txt';
+    const URL = './numbers.json';
     const inletResponse = await fetch(URL);
     const inlet = await inletResponse.json();
     // input for showing number_info

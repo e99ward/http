@@ -3,10 +3,9 @@ import datetime
 import requests
 
 numbers = []
-numbers_to_add = []
 
 def LoadNumbersJSON():
-    filename = 'numbers.txt'
+    filename = 'numbers.json'
     with open(filename, 'r') as handle:
         file_data = json.load(handle)
         for list_to_add in file_data:
@@ -14,7 +13,7 @@ def LoadNumbersJSON():
         print('nums', numbers)
 
 def SaveNumbersJSON():
-    filename = 'numbers.txt'
+    filename = 'numbers.json'
     with open(filename, 'w') as handle:
         handle.write('[')
         mline = len(numbers)-1
@@ -41,6 +40,7 @@ def _get_lotto_number_by_draw(round_number):
     to_save = { 'draw': round_number, 'date': draw_date, 'n': [no_1,no_2,no_3,no_4,no_5,no_6], 'bonus': no_bonus }
     return to_save
 
+
 LoadNumbersJSON()
 
 today = datetime.datetime.today()
@@ -55,7 +55,6 @@ while (today > date_to_be_saved):
     date_to_be_saved = date_to_be_saved + datetime.timedelta(days=7)
 
 print(numbers)
-print(numbers_to_add)
 
 if save_new_number:
     SaveNumbersJSON()
