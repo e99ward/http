@@ -2,7 +2,7 @@
 let numbers = [];
 let current = 1;
 
-const URL = 'numbers.txt';
+const URL = 'numbers.v1.txt';
 fetch(URL)
     .then(response => response.text())
     .then(text => {

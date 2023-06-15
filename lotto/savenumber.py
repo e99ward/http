@@ -44,6 +44,7 @@ def _get_lotto_number_by_draw(round_number):
 LoadNumbersJSON()
 
 today = datetime.datetime.today()
+#today = datetime.datetime.strptime('2021-10-11', "%Y-%m-%d")
 date_saved = datetime.datetime.strptime(numbers[-1]['date'], "%Y-%m-%d")
 date_to_be_saved = date_saved + datetime.timedelta(days=7)
 
