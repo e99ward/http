@@ -37,21 +37,21 @@ function moveLeft() {
 }
 
 /* link */
-let toggle = true;
-let x = document.createElement("AUDIO");
+// let toggle = true;
+// let x = document.createElement("AUDIO");
 
-function playSong(str) {
-  let filename = "./media/" + str + ".mp3";
+// function playSong(str) {
+//   let filename = "./media/" + str + ".mp3";
 
-  if (toggle == true) {
-    x.setAttribute("src", filename);
-    x.play();
-    toggle = false;
-  } else {
-    x.pause();
-    toggle = true;
-  }
-}
+//   if (toggle == true) {
+//     x.setAttribute("src", filename);
+//     x.play();
+//     toggle = false;
+//   } else {
+//     x.pause();
+//     toggle = true;
+//   }
+// }
 
 // function playVideo_old(str) {
 //   let video = document.querySelector('.youtube');
