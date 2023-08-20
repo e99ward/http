@@ -62,21 +62,21 @@ function playSong(str) {
 //   document.getElementById('video').setAttributeNode(attr);
 // }
 
-function playVideo(str) {
-  let video = document.querySelector('.youtube');
-  video.style.display = "block";
-  let iframe = '<iframe id="video" width="420" height="315" src="//www.youtube.com/embed/';
-  iframe += str;
-  iframe += '" frameborder="1" allowfullscreen></iframe>';
-  iframe += '<button onclick="closeVideo()">Close</button>';
-  document.getElementById('player').innerHTML = iframe;
-}
+// function playVideo(str) {
+//   let video = document.querySelector('.youtube');
+//   video.style.display = "block";
+//   let iframe = '<iframe id="video" width="420" height="315" src="//www.youtube.com/embed/';
+//   iframe += str;
+//   iframe += '" frameborder="1" allowfullscreen></iframe>';
+//   iframe += '<button onclick="closeVideo()">Close</button>';
+//   document.getElementById('player').innerHTML = iframe;
+// }
 
-function closeVideo () {
-  let video = document.querySelector('.youtube');
-  video.style.display = "none";
-  document.getElementById('video').removeAttribute("src");
-}
+// function closeVideo () {
+//   let video = document.querySelector('.youtube');
+//   video.style.display = "none";
+//   document.getElementById('video').removeAttribute("src");
+// }
 
 function showThem(str) {
   let brief = document.querySelector('.brief');
