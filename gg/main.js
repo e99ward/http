@@ -53,14 +53,14 @@ function playSong(str) {
   }
 }
 
-function playVideo_old(str) {
-  let video = document.querySelector('.youtube');
-  video.style.display = "block";
-  let filename = "//www.youtube.com/embed/" + str;
-  const attr = document.createAttribute("src");
-  attr.value = filename;
-  document.getElementById('video').setAttributeNode(attr);
-}
+// function playVideo_old(str) {
+//   let video = document.querySelector('.youtube');
+//   video.style.display = "block";
+//   let filename = "//www.youtube.com/embed/" + str;
+//   const attr = document.createAttribute("src");
+//   attr.value = filename;
+//   document.getElementById('video').setAttributeNode(attr);
+// }
 
 function playVideo(str) {
   let video = document.querySelector('.youtube');
